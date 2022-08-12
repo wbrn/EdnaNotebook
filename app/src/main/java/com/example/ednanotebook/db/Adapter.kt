@@ -30,17 +30,20 @@ class Adapter(listMain:ArrayList<ListItem>, contextM: Context) : RecyclerView.Ad
 
     class Holder(itemView: View, contextV: Context) : RecyclerView.ViewHolder(itemView) {
          val tvTitle = itemView.findViewById<TextView>(R.id.tv_Title)!!
+         val tvTime = itemView.findViewById<TextView>(R.id.tvTime)!!
         val context = contextV
 
         fun setData(item:ListItem){
 
             tvTitle.text = item.title
+            tvTime.text = item.time
             itemView.setOnClickListener{
                 val intent = Intent(context, EditActivity::class.java).apply {
 
                     putExtra(MyIntentConstants.I_TITLE_KEY, item.title)
                     putExtra(MyIntentConstants.I_DESC_KEY, item.desc)
                     putExtra(MyIntentConstants.I_URI_KEY, item.uri)
+                    putExtra(MyIntentConstants.I_ID_KEY, item.id)
 
 
                 }
@@ -85,6 +88,15 @@ class Adapter(listMain:ArrayList<ListItem>, contextM: Context) : RecyclerView.Ad
         listArray.clear()
         listArray.addAll(listItems)
         notifyDataSetChanged()
+    }
+
+
+    fun removeItem(pos:Int, dbManager: DbManager){
+
+        dbManager.removeItemFromDb(listArray[pos].id.toString())
+        listArray.removeAt(pos)
+        notifyItemRangeChanged(0, listArray.size)
+        notifyItemRemoved(pos)
     }
 
     }
