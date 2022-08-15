@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "475839179324",
+    "project_id": "ednanotenook",
+    "storage_bucket": "ednanotenook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475839179324:android:007681b149f96abe557139",
+        "android_client_info": {
+          "package_name": "com.example.ednanotebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475839179324-rnh12ptg0p180g2ou6v31h59dgf6a7hb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2PpzYefJslwWsE6LKS-Qco0KjI4n1LkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475839179324-rnh12ptg0p180g2ou6v31h59dgf6a7hb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
