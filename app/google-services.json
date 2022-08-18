@@ -2,7 +2,8 @@
   "project_info": {
     "project_number": "475839179324",
     "project_id": "ednanotenook",
-    "storage_bucket": "ednanotenook.appspot.com"
+    "storage_bucket": "ednanotenook.appspot.com",
+    "firebase_url" : "https://ednanotenook-default-rtdb.europe-west1.firebasedatabase.app"
   },
   "client": [
     {
